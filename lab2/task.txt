@@ -1,0 +1,8 @@
+# Input data
+# footage, materials, floor, district, style, category
+# Example: 85 m^2, composite, 5th floor, center, standard, economy
+
+# Results: 
+# -собівартість (СВ);
+# -вартість забудовника (ПК);
+# -загальна вартість (ПВ).
