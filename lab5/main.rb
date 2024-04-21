@@ -5,9 +5,9 @@ def count_characters(string)
     digit_count = string.scan(/\d/).size
   
     puts "Розмір рядка без пробілів: #{size - string.count(' ')}"
-    puts "Розмір рядка з пробілами: #{size}"
+    puts "Розмір рядка з пробілами:  #{size}"
     puts "Кількість заголовних букв: #{uppercase_count}"
-    puts "Кількість прописних букв: #{lowercase_count}"
+    puts "Кількість прописних букв:  #{lowercase_count}"
     puts "Кількість цифр: #{digit_count}"
   end
   
