@@ -15,6 +15,7 @@ class Pizza
             @@failInstance += 1
             return
         end
+        
 
         @ingradients = ingradients
     end
@@ -26,8 +27,8 @@ end
 
 pizza1 = Pizza.new(10, ['mushroom', 'cheese'])
 pizza2 = Pizza.new(25, ['mushroom', 'cheese', 'cherry'])
-pizza3 = Pizza.new(50, ['mushroom'])
-pizza4 = Pizza.new(100, ['mushroom', 'cheese', 'cherry'])
+pizza3 = Pizza.new(100, ['mushroom', 'cheese', 'cheese'])
+pizza4 = Pizza.new(50, ['mushroom'])
 
 puts Pizza.failInstance
 puts ("\n")

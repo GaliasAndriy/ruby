@@ -40,15 +40,16 @@ class Author
 
     def initialize(authors, title, publisher, year)
         if valid_title?(title) && valid_publisher?(publisher) && valid_year?(year) && unique_authors?(authors)
-        @authors = authors
-        @title = title
-        @publisher = publisher
-        @year = year
+            @authors = authors
+            @title = title
+            @publisher = publisher
+            @year = year
         else
-        @authors = []
-        @title = nil
-        @publisher = nil
-        @year = nil
+            @authors = []
+            @title = nil
+            @publisher = nil
+            @year = nil
+            puts "Error: Authors for the same book must be unique."
         end
     end
 
@@ -74,14 +75,16 @@ class Author
     end
 
     def unique_authors?(authors)
-        authors.uniq.length == authors.length
+        author_strings = authors.map { |author| [author.lastname, author.firstname, author.middlename] }
+        author_strings.uniq.length == authors.length
     end
     end
 
     author1 = Author.new("Джоан", "Роулінг")
+    # author2 = Author.new("Джоан", "Роулінг")
 
     book_authors = [author1]
-    book1 = Book.new(book_authors, "Гаррі Поттер і філософський камінь", "А-БА-БА-ГА-ЛА-МА-ГА", "1997")
+    book1 = Book.new(book_authors, "Гаррі Поттер і філософський камінь", "А-БА-БА-ГА-ЛА-МА-ГА", "2050")
 
     puts book1
   
